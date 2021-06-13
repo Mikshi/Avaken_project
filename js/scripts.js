@@ -76,7 +76,7 @@ if(menuLinks.length > 0){
 
       window.scrollTo({
         top: gotoBlockValue,
-        dehavior: "smooth"
+        behavior: "smooth"
       });
       //отключает работу ссылки!
       e.preventDefault();

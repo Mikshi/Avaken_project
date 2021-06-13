@@ -372,7 +372,7 @@ table {
   }
   .header-menu__body-list-item:hover {
     padding-bottom: 0;
-    border-bottom: none;
+    border-bottom: 2px solid transparent;
     text-transform: none;
   }
   .header-menu__body-list-item:last-child {

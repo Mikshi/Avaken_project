@@ -37,6 +37,10 @@ if (isMobile.any()){
 
 //меню бургер
 
+const head = document.querySelector('.header');
+const imgFix = document.querySelector('.logo-img');
+const linkFix = document.querySelectorAll('a.header-menu__body-list-item-link');
+// const imgFix = document.querySelector('.logo-img');
 const iconMenu = document.querySelector('.header-menu__icon');
 const menuBody = document.querySelector('.header-menu__body');
 // console.log(iconMenu);
@@ -48,6 +52,37 @@ if (iconMenu) {
     menuBody.classList.toggle('_active');
   });
 }
+
+var scroll_distance = 120;
+
+window.addEventListener('scroll', fixHeader);
+
+function fixHeader() {
+  if(linkFix.length > 0){
+    if ( window.pageYOffset >= scroll_distance ){
+      linkFix.forEach(linkFix => {
+        // console.log("add!" );
+        linkFix.classList.add('_fix');
+      });
+    }else {
+      linkFix.forEach(linkFix => {
+        // console.log("rem!" );
+        linkFix.classList.remove('_fix');
+      });
+    }
+  }
+  if ( window.pageYOffset >= scroll_distance) {
+    head.classList.add('_fix');
+    iconMenu.classList.add('_fix');
+    menuBody.classList.add('_fix');
+    imgFix.classList.add('_fix');
+  } else {
+    head.classList.remove('_fix');
+    iconMenu.classList.remove('_fix');
+    menuBody.classList.remove('_fix');
+    imgFix.classList.remove('_fix');
+  }
+};
 
 // прокрутка к якорю
 
@@ -76,7 +111,7 @@ if(menuLinks.length > 0){
 
       window.scrollTo({
         top: gotoBlockValue,
-        behavior: "smooth"
+        dehavior: "smooth"
       });
       //отключает работу ссылки!
       e.preventDefault();

@@ -5,7 +5,13 @@
   width: 100%; 
   z-index: 10;
   background-color: $secondary-color;
+  transition: .5s ease-out .2s;
+  &._fix{
+    background-color: $wh-color;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+  }
 }
+
 .container{
   max-width: 1220px;
   margin: 0 auto;
@@ -31,7 +37,10 @@
 }
 
 .logo-img {
-  filter: invert(0);
+  transition: .5s ease-out .2s;
+  &._fix{
+    filter: invert(1);
+  }
   @include for-size-max(max-md) {
     max-width: 62%;
     padding-top: 14px;
@@ -90,6 +99,15 @@
       bottom : 50%;
       transform: rotate(45deg) translate(0px,50%);
     }
+    &._fix > span{
+      background-color: $secondary-color;
+    }
+    &._fix::before{
+      background-color: $secondary-color;
+    }
+    &._fix::after{
+      background-color: $secondary-color;
+    }
   }
 }
 .header-menu__body{
@@ -115,6 +133,9 @@
       height: 60px;
       background-color: $secondary-color;
       z-index: 2;
+    }
+    &._fix::before{
+      background-color: $wh-color;
     }
   }
 }
@@ -159,6 +180,10 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 20px;
+  transition: .5s ease-out .2s;
+  &._fix{
+    color: $secondary-color;
+  }
   @include for-size(md) {    
     &:hover{
       color: $primary-color;

@@ -108,7 +108,13 @@ section {
 }
 
 body {
+  background-color: $bg-color;
+  font-family: $primary-font;
   line-height: 1;
+  min-height: 100%;
+}
+body._lock {
+  overflow: hidden;
 }
 
 ol,

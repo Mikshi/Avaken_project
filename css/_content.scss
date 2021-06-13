@@ -1,0 +1,26 @@
+.main {
+  padding: 158px 0 30px 0;
+  @include for-size-max(max-md) {
+    padding: 75px 15px;
+  }
+}
+h1 {
+  font-size: 45px;
+  padding: 25px 0 25px 0;
+}
+.container > h2 {
+  font-size: 35px;
+  padding: 20px 0 10px 0;
+}
+.container > h2 > p{ 
+  padding: 20px 0 15px 0;
+}
+.main-build-something {
+  border-bottom-color: #d90;
+}
+.main-service {
+  border-bottom-color: #33d;
+}
+.main-about {
+  border-bottom-color: #ccc333;
+}

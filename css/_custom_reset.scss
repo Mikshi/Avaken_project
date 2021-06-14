@@ -106,6 +106,14 @@ nav,
 section {
   display: block;
 }
+img,
+video,picture{
+  max-width: 100%;
+}
+button{
+  border: none;
+  background-color: transparent;
+}
 
 body {
   background-color: $bg-color;

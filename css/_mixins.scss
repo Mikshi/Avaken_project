@@ -13,7 +13,7 @@
 }
 @mixin for-size-max($size) {
   @if $size == max-sm {
-    @media (max-width: 576px) { @content; }
+    @media (max-width: 420px) { @content; }
   } @else if $size == max-md {
     @media (max-width: 768px) { @content; }
   } @else if $size == max-lg {

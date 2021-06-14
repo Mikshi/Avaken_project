@@ -102,6 +102,9 @@ button.btn-slide.icon-next{
   font-size: 30px;
   line-height: 120%;
   margin-bottom: 32px;
+  @include for-size-max(max-sm) { 
+    font-size: 25px;
+  }
   @include for-size(md) { 
     font-size: 60px;
     line-height: 115%;

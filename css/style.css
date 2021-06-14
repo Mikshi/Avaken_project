@@ -111,6 +111,7 @@ section {
 img,
 video, picture {
   max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -501,7 +502,7 @@ table {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 420px) {
   .swiper-button {
     min-width: 61%;
   }
@@ -594,6 +595,12 @@ button.btn-slide.icon-next:hover {
   font-size: 30px;
   line-height: 120%;
   margin-bottom: 32px;
+}
+
+@media (max-width: 420px) {
+  .main-build-something-text-title {
+    font-size: 25px;
+  }
 }
 
 @media (min-width: 768px) {

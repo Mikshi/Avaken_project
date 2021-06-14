@@ -4,9 +4,136 @@
     padding: 75px 15px;
   }
 }
-h1 {
-  font-size: 45px;
-  padding: 25px 0 25px 0;
+.main-build-something-wrapper{
+  display: flex;
+  align-items: center;
+}
+.main-build-something-swiper{
+  position: relative;
+  width: 50%;
+}
+.slider{
+  overflow: hidden;
+  width: 100%;
+}
+.slider-wrap{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.swiper-button{
+  display: flex;
+  background-color: #f8f8f8;
+  min-width: 30%;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: absolute;
+  padding: 4px 0;
+  height: 50px;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #252525;
+  z-index: 2;
+  @include for-size-max(max-md) {  
+    min-width: 50%;
+  }
+  @include for-size-max(max-sm) {  
+    min-width: 61%;
+  }
+  @include for-size(lg) { 
+    height: 66px;
+  }
+  @include for-size(xl) { 
+    height: 70px;
+  }
+  &::before {
+    content: "";
+    background: #252525;
+    position: absolute;
+    left: 50%;
+    height: 75%;
+    width: 1px;
+    opacity: 0.2;
+  }
+}
+button.btn-slide {
+  width: 100%;
+  height: 100%;
+  position: static;
+}
+button.btn-slide,
+button.btn-slide.icon-prev,
+button.btn-slide.icon-next{
+  transition: .3s ease-in .2s;
+  color: $secondary-color;
+  &:hover{
+    background-color: $primary-color;
+    color: $wh-color;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.icon-prev{
+  transform: rotate(180deg);
+  color: inherit;
+}
+.icon-next{
+  color: inherit;
+  transition: .3s ease 0s;
+}
+.main-build-something-text{
+  padding-left: 20px;
+  @include for-size(md) { 
+    padding-left: 38px;
+  }
+  @include for-size(lg) { 
+    padding-left: 44px;
+  }
+  @include for-size(xl) { 
+    padding-left: 64px;
+  }
+}
+.main-build-something-text-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  margin-bottom: 32px;
+  @include for-size(md) { 
+    font-size: 60px;
+    line-height: 115%;
+    letter-spacing: -0.015em;
+  }
+  @include for-size(lg) { 
+    font-size: 75px;
+    line-height: 109%;
+    margin-bottom: 40px;
+  }
+  @include for-size(xl) { 
+    font-size: 90px;
+    margin-bottom: 46px;
+  }
+}
+.main-build-something-text-link,
+.main-build-something-text-link.icon{
+  background-color: $primary-color;
+  color: $wh-color;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  transition: .3s ease-in .2s;
+  &:hover{
+    background-color: $wh-color;
+    color: $primary-color;
+  }
 }
 .container > h2 {
   font-size: 35px;
@@ -15,12 +142,15 @@ h1 {
 .container > h2 > p{ 
   padding: 20px 0 15px 0;
 }
-.main-build-something {
-  border-bottom-color: #d90;
+.icon{
+  color: inherit;
+  font-size: 10px;
+  margin-left: 6px;
 }
-.main-service {
-  border-bottom-color: #33d;
+.slide-card{
+  flex-shrink: 0;
 }
-.main-about {
-  border-bottom-color: #ccc333;
+.foto-img{
+  height: 100%;
+  width: 100%;
 }

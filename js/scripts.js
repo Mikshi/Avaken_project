@@ -129,7 +129,9 @@ if(menuLinks.length > 0){
     // console.log(menuLink);
     if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
+      let headerPix = document.querySelector('.header').offsetHeight + document.querySelector('.header-menu__body-list-item-link').offsetHeight;
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - headerPix;
+      console.log("Гото ",headerPix);
       // console.log("Гото ",gotoBlock);
       if (iconMenu.classList.contains('_active') || iconMenu.classList.contains('_pc')){
         document.body.classList.remove('_lock');

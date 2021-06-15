@@ -422,7 +422,12 @@ button.btn-slide.icon-next{
     padding: 32px 40px;
   }
 }
-
+.main-about-contact__write-form-wrapper{
+  @include for-size(lg) { 
+    display: flex;
+    align-items: baseline;
+  }
+}
 .main-about-contact__write-wrapper-title{
   font-size: 20px;
   color: $wh-color;
@@ -470,15 +475,21 @@ textarea{
 }
 input{
   height: 47px;
-  min-width: 280px;
+  min-width: 20%;
 }
 textarea{
   min-height: 118px;
-  min-width: 280px;
+  min-width: 260px;
   resize: none;
   display: flex;
 }
-
+.main-about-contact__write-form-wrapper-input{
+  @include for-size(lg) { 
+    &:first-child{
+      margin-right: 20px;
+    }
+  }
+}
 .main-about-contact__write-form-wrapper-input-label{
   color: white;
   padding-bottom: 2px;

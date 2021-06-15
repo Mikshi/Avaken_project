@@ -1060,6 +1060,17 @@ button.btn-slide.icon-next:hover {
   }
 }
 
+@media (min-width: 992px) {
+  .main-about-contact__write-form-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
 .main-about-contact__write-wrapper-title {
   font-size: 20px;
   color: white;
@@ -1113,16 +1124,22 @@ textarea:focus {
 
 input {
   height: 47px;
-  min-width: 280px;
+  min-width: 20%;
 }
 
 textarea {
   min-height: 118px;
-  min-width: 280px;
+  min-width: 260px;
   resize: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 992px) {
+  .main-about-contact__write-form-wrapper-input:first-child {
+    margin-right: 20px;
+  }
 }
 
 .main-about-contact__write-form-wrapper-input-label {

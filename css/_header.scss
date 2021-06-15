@@ -154,6 +154,7 @@
   margin: 0 0 0 40px;
   // transition: .3s ease 0s;
   border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
   &:hover {
     padding-bottom: 4px;
     border-bottom: 2px solid $primary-color;
@@ -180,6 +181,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 20px;
+  padding-bottom: 4px;
   transition: .5s ease-out .2s;
   &._fix{
     color: $secondary-color;

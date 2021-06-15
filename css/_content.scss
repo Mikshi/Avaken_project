@@ -339,6 +339,7 @@ button.btn-slide.icon-next{
   justify-content: center;
   bottom: 0;
   right: 0;
+  cursor: pointer;
   transition: .3s ease-in .2s;
   &:hover{
     color: $wh-color;
@@ -361,15 +362,34 @@ button.btn-slide.icon-next{
   padding-bottom: 0;
   margin-top: 50px;
   margin-bottom: 24px;
+  @include for-size(md) { 
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  @include for-size(lg) { 
+    align-items: center;
+  }
 }
 .main-service-about__title{
   margin-bottom: 16px;
+  @include for-size(md) { 
+    margin-bottom: 36px;
+    max-width: 50%;
+    padding-top: inherit;
+  }
+  @include for-size(lg) { 
+    margin-bottom: 56px;
+  }
 }
-.main-service-about__sub-title{
 
-}
 .main-about-inner{
   margin-bottom: 32px;
+  @include for-size(md) { 
+    max-width: 50%;
+  }
+  @include for-size(lg) { 
+
+  }
 }
 .main-about-inner__text{
   padding-bottom: 0px;
@@ -389,17 +409,18 @@ button.btn-slide.icon-next{
   }
 }
 .main-about-contact__picture{
-
+  @include for-size(lg) { 
+    min-width: 50%;
+  }
 }
-.main-about-contact__picture-img{
 
-}
 .main-about-contact__write{
   padding: 24px 20px;
+  @include for-size(lg) { 
+    padding: 32px 40px;
+  }
 }
-.main-about-contact__write-wrapper{
 
-}
 .main-about-contact__write-wrapper-title{
   font-size: 20px;
   color: $wh-color;
@@ -409,21 +430,16 @@ button.btn-slide.icon-next{
 .main-about-contact__write-wrapper-text{
   padding-bottom: 20px;
 }
-.main-about-contact__write-form{
-
-}
-.main-about-contact__write-form-wrapper{
-
-}
 
 .input-form{
   padding-top: 8px;
   &:first-child{
     padding-top: 0;
   }
+  border-bottom: 2px solid $primary-color;
   position: relative;
   &::before{
-    content: "";
+    // content: "";
     position: absolute;
     height: 2px;
     width: 100%;
@@ -439,17 +455,27 @@ textarea{
   padding: 0;
   margin: 0;
   border: none;
+  padding: 16px;
+  color: $wh-color;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  &:active,
+  &:focus{
+    background-color: $wh-color;
+    color: $primary-color;
+  }
 }
 input{
   height: 47px;
 }
 textarea{
-  height: 118px;
+  min-height: 118px;
+  min-width: 350px;
+  resize: none;
+  display: flex;
 }
 
-.main-about-contact__write-form-wrapper-input{
-
-}
 .main-about-contact__write-form-wrapper-input-label{
   color: white;
   padding-bottom: 2px;
@@ -457,9 +483,7 @@ textarea{
   font-size: 14px;
   line-height: 160%;
 }
-.main-about-contact__write-form-textarea{
-
-}
 .main-about-contact__write-form-send{
   margin-top: 20px;
+  cursor: pointer;
 }

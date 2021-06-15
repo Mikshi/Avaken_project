@@ -965,7 +965,9 @@ button.btn-slide.icon-next:hover {
   padding-bottom: 0;
   margin-top: 50px;
   margin-bottom: 24px;
-  display: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (min-width: 768px) {

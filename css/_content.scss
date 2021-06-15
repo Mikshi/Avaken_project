@@ -409,6 +409,7 @@ button.btn-slide.icon-next{
   }
 }
 .main-about-contact__picture{
+  max-width: 100%;
   @include for-size(lg) { 
     min-width: 50%;
   }
@@ -468,10 +469,11 @@ textarea{
 }
 input{
   height: 47px;
+  min-width: 280px;
 }
 textarea{
   min-height: 118px;
-  min-width: 350px;
+  min-width: 280px;
   resize: none;
   display: flex;
 }

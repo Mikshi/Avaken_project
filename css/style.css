@@ -1039,6 +1039,10 @@ button.btn-slide.icon-next:hover {
   }
 }
 
+.main-about-contact__picture {
+  max-width: 100%;
+}
+
 @media (min-width: 992px) {
   .main-about-contact__picture {
     min-width: 50%;
@@ -1108,11 +1112,12 @@ textarea:focus {
 
 input {
   height: 47px;
+  min-width: 280px;
 }
 
 textarea {
   min-height: 118px;
-  min-width: 350px;
+  min-width: 280px;
   resize: none;
   display: -webkit-box;
   display: -ms-flexbox;
